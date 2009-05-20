@@ -1,13 +1,17 @@
-= campfire_notifications
+h1. Campfire Notifier for Redmine
 
 A Redmine plugin to display activity notifications on Campfire.
 
-= Installation
+!http://www.atelierconvivialite.com/images/posts/campfire_redmine.png!
+
+"Blog post demonstrating its awesomeness":http://www.atelierconvivialite.com/2009/05/19/in-search-for-convivial-communication
+
+h1. Installation
 
 * Make sure you have the Tinder gem: sudo gem install tinder
 * Copy the plugin into Redmine’s /vendor/plugins/, edit /lib/notifier_hook.rb to set your Campfire settings, restart Apache and voilà.
 
-= Gotchas
+h1. Gotchas
 
 The 3 following hooks need a few changes in Redmine’s core code. I’ve submitted a patch to the Redmine team to include it.
 http://github.com/edouard/redmine/commit/4fe97f7d7788d5b5225bbe4603f646ac5eaede5b
@@ -18,3 +22,9 @@ http://www.redmine.org/issues/3306
 * controller_wiki_after_save
 
 These 3 hooks are used to send notifications about forum posts creation and wiki creation/edits.
+
+h1. To do
+
+* Create a plugin interface. Right now the campfire authentication is hard-coded in the plugin. Create a plugin controller + view so the user should be able to:
+** Set the campfire room parameters (url, login, password)
+** Set which project should talk on Campfire
