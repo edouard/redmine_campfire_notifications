@@ -13,13 +13,12 @@ h1. Installation
 
 h1. Gotchas
 
-The 3 following hooks need a few changes in Redmine’s core code. I’ve submitted a patch to the Redmine team to include it.
-http://github.com/edouard/redmine/commit/4fe97f7d7788d5b5225bbe4603f646ac5eaede5b
-http://www.redmine.org/issues/3306
+The 3 following hooks need a few changes which are currently in Redmine’s master core code.
+http://github.com/edavis10/redmine/commit/4ba83085072d69451149896002958c6ab479b0c8
 
-* controller_board_message_new_after_save
-* controller_board_message_reply_after_save
-* controller_wiki_after_save
+* controller_messages_new_after_save
+* controller_messages_reply_after_save
+* controller_wiki_edit_after_save
 
 These 3 hooks are used to send notifications about forum posts creation and wiki creation/edits.
 
