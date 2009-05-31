@@ -18,21 +18,21 @@ class NotifierHook < Redmine::Hook::Listener
     speak "#{@user.firstname} edited issue “#{@issue.subject}”. Comment: “#{truncate_words(@journal.notes)}”. http://bugs.atelierconvivialite.com/issues/#{@issue.id}"
   end
 
-  def controller_board_message_new_after_save(context = { })
+  def controller_messages_new_after_save(context = { })
     @project = context[:project]
     @message = context[:message]
     @user = @message.author
     speak "#{@user.firstname} wrote a new message “#{@message.subject}” on #{@project.name}: “#{truncate_words(@message.content)}”. http://bugs.atelierconvivialite.com/boards/#{@message.board.id}/topics/#{@message.root.id}#message-#{@message.id}"
   end
   
-  def controller_board_message_reply_after_save(context = { })
+  def controller_messages_reply_after_save(context = { })
     @project = context[:project]
     @message = context[:message]
     @user = @message.author
     speak "#{@user.firstname} replied a message “#{@message.subject}” on #{@project.name}: “#{truncate_words(@message.content)}”. http://bugs.atelierconvivialite.com/boards/#{@message.board.id}/topics/#{@message.root.id}#message-#{@message.id}"
   end
   
-  def controller_wiki_after_save(context = { })
+  def controller_wiki_edit_after_save(context = { })
     @project = context[:project]
     @page = context[:page]
     @user = @page.content.author
