@@ -2,9 +2,9 @@ h1. Campfire Notifier for Redmine
 
 A Redmine plugin to display activity notifications on Campfire.
 
-!http://www.atelierconvivialite.com/images/posts/campfire_redmine.png!
+!http://static.atelierconvivialite.com/posts/campfire_redmine.png!
 
-"Blog post demonstrating its awesomeness":http://www.atelierconvivialite.com/2009/05/19/in-search-for-convivial-communication
+"Blog post demonstrating its awesomeness":http://atelierconvivialite.com/post/202630568
 
 h1. Installation
 
