@@ -1,4 +1,3 @@
-gem 'tinder'
 require 'tinder'
 
 class NotifierHook < Redmine::Hook::Listener
